@@ -1,0 +1,32 @@
+{{yield}}
+
+<h1>TT</h1>
+
+<!-- TODO: move name to first page of application. -->
+{{input type="text" value=name}}
+<button {{action "play"}}>Play</button>
+
+<button {{action "reset"}}>Reset</button>
+
+<div class="player">
+	<label class="name">{{name}}</label>
+</div>
+
+<table >
+	<tbody>
+		{{#each map as |row|}}
+			<tr>
+				{{#each row as |cell|}}
+					<td cellspacing=0 fill={{cell.fill}} {{action "mark" cell.coords}}>
+						{{cell-content text=cell.symbol}}
+					</td>
+				{{/each}}
+			</tr>
+		{{/each}}
+	</tbody>
+
+	{{#if message}}
+		<div class="msg">{{message}}</div>
+	{{/if}}
+
+</table>
