@@ -1,7 +1,9 @@
-# TT
+# Introduction
 
-This README outlines the details of collaborating on this Ember application.
+
+This project outlines some details while working with Ember application.
 A short introduction of this app could easily go here.
+
 
 ## Prerequisites
 
